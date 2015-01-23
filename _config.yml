@@ -4,7 +4,7 @@ email: ntbartley@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   My experience navigating a liberal arts education, trying to be a good human being,
   and figuring out how to my mark. 
-baseurl: "/blog" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bartleyn.github.io/" # the base hostname & protocol for your site
 twitter_username: reichaos
 github_username:  bartleyn
