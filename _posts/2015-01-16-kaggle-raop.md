@@ -15,4 +15,5 @@ I was originally introduced to Kaggle through a data analysis course in my Maste
 #The Competition
 The prompt for the competition is a rather interesting one. Using a collection of ~5000 posts and relevant meta-data from the subreddit /r/RandomActsOfPizza as described above, the competitors are to generate an algorithm to predict whether or not a user's post to the subreddit will result in a pizza or not. 
 
+## The rest of this is in progress. I submitted a couple of naive classifiers, but to no avail really. I will update it as I progress.
 
