@@ -1,9 +1,9 @@
----
+<!--i---
 layout: post
 title:  "Exploring the Random Acts of Pizza"
 date:   2015-01-16 22:34:37
 categories: jekyll update
----
+----->
 
 I've been doing a lot of coursework and have some paid work done in machine learning now, but I haven't really taken the time to work on side projects. I've been working off and on on a few projects, this being one of them.
 
