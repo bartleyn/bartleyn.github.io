@@ -5,7 +5,7 @@ date:   2021-10-19 21:23:00
 categories: jekyll update
 ----->
 
-## Conecting Clang/C++ compiler to VSCode (macOS)
+## Connecting Clang/C++ compiler to VSCode (macOS)
 
 This is a short post meant to step through the steps needed to get Visual Studio code (macOS) to use your clang c++ compiler to build your cpp code.
 
@@ -100,6 +100,12 @@ Now we can try to run the build task again:
 ![](/assets/images/vscode_4_build_task_run.png)
 
 We get a terminal at the bottom reporting that the build task was run successfully.
+
+
+###Just regularly compiling
+
+If you wanted to skip the "build task" setup step and just jump to compiling via the terminal yourself, you can use clang like you would use gcc/g++:
+```clang+++ vscode_test.cpp -o vscode_test```
 
 ### Running the code
 
