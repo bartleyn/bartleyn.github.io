@@ -10,3 +10,10 @@ github_username:  bartleyn
 
 # Build settings
 markdown: kramdown
+
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
