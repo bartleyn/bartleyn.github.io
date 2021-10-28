@@ -8,7 +8,7 @@ categories: jekyll update
 ## Recovering MySQL data from .MYI, .MYD, .FRM files
 
 ###Summary
-* Spinning up AWS
+
 * Identifying the hexdump of the version number of the .frm file  
 * Installing that version of MySQL
         https://downloads.mysql.com/archives/community/
@@ -19,7 +19,6 @@ categories: jekyll update
 * using mysqldump to dump the data to a CSV format
 
 
-## Setting up AWS
 
 ## What version of MySQL to install?
 
@@ -58,6 +57,8 @@ mysql_install_db --user=mysql \
          --basedir=/opt/mysql/mysql \
          --datadir=/opt/mysql/mysql/data
 ```
+
+Now you can copy your .FRM, .MYD, .MYI files into your data directory!
 
 ### Starting up
 If your installation includes `mysqld_safe` run:
