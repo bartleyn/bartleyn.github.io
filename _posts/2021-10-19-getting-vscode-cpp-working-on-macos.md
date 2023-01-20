@@ -105,7 +105,7 @@ We get a terminal at the bottom reporting that the build task was run successful
 ###Just regularly compiling
 
 If you wanted to skip the "build task" setup step and just jump to compiling via the terminal yourself, you can use clang like you would use gcc/g++:
-```clang+++ vscode_test.cpp -o vscode_test```
+```clang++ vscode_test.cpp -o vscode_test```
 
 ### Running the code
 
