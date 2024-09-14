@@ -217,7 +217,7 @@ nav ul li a {
 }
 
 .profile-img {
-    width: 150px;
+    width: 125px;
     border-radius: 50%;
 }
 
@@ -243,3 +243,18 @@ nav ul li a {
         }
     }
 }
+
+.icon {
+  display: inline-block; /* Ensures icons are displayed inline */
+  width: 24px; /* Set a specific width for the icon */
+  height: 24px; /* Set a specific height for the icon */
+  margin-right: 8px; /* Adds some spacing between icons and text */
+  vertical-align: middle; /* Aligns icons vertically in the middle of the text */
+}
+
+.icon svg {
+  width: 100%; /* Makes the SVG scale to the size of the parent icon container */
+  height: 100%; /* Ensures the SVG scales proportionately */
+  fill: currentColor; /* Allows the icon color to be inherited from the text color */
+}
+
