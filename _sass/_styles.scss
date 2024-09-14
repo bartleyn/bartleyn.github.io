@@ -1,0 +1,87 @@
+/* Footer general styles */
+.site-footer {
+  background-color: #f1f1f1;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-col-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.footer-col {
+  flex: 1;
+  padding: 10px;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li,
+.social-media-list li {
+  margin-bottom: 8px;
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Styles for icons */
+.icon {
+  display: inline-block;
+  width: 24px; /* Set icon width */
+  height: 24px; /* Set icon height */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle;
+}
+
+.icon svg {
+  width: 100%; /* Ensure SVG fills parent container */
+  height: 100%;
+  fill: currentColor; /* Inherits text color for easy styling */
+}
+
+.username {
+  margin-left: 5px; /* Adds spacing between icon and username text */
+}
+
+.text {
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-col-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-col {
+    margin-bottom: 15px;
+  }
+}
+
