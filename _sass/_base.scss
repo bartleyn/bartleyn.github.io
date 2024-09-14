@@ -217,13 +217,19 @@ nav ul li a {
 }
 
 .profile-img {
-    width: 125px;
+    width: 100px;
     border-radius: 50%;
+    height: auto;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
     text-align: center;
-    padding: 40px;
+
 }
 
 
