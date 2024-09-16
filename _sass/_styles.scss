@@ -204,3 +204,104 @@ body {
     align-self: center; // Center the button on small screens
   }
 }
+
+.about-intro, .about-details {
+  padding: 40px 0;
+}
+
+.about-details h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.about-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-details ul li {
+  margin-bottom: 10px;
+}
+
+.about-details a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-details a:hover {
+  color: #2980b9;
+}
+
+.teaching-intro, .teaching-experience, .teaching-philosophy, .future-goals {
+  padding: 40px 0;
+}
+
+.teaching-experience h2, .teaching-philosophy h2, .future-goals h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.teaching-experience ul, .teaching-philosophy ul, .future-goals ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.teaching-experience li {
+  margin-bottom: 30px;
+}
+
+.teaching-experience h3 {
+  margin-bottom: 5px;
+}
+
+.teaching-experience p em {
+  font-style: italic;
+  color: #666;
+}
+
+.teaching-philosophy ul li, .future-goals ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.teaching-philosophy ul li:before, .future-goals ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+}
+
+.cv-intro, .cv-education, .cv-research, .cv-publications, .cv-skills {
+  padding: 40px 0;
+}
+
+.cv-intro .btn {
+  margin-top: 20px;
+}
+
+.cv-education h2, .cv-research h2, .cv-publications h2, .cv-skills h2 {
+  margin-bottom: 20px;
+}
+
+.cv-education ul, .cv-research ul, .cv-publications ul, .cv-skills ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cv-education li, .cv-research li {
+  margin-bottom: 30px;
+}
+
+.cv-education h3, .cv-research h3 {
+  margin-bottom: 5px;
+}
+
+.cv-publications li {
+  margin-bottom: 15px;
+}
+
+.cv-skills li {
+  margin-bottom: 10px;
+}
