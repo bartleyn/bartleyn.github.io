@@ -65,10 +65,6 @@ body {
   margin-right: 20px;
 }
 
-.intro {
-  max-width: 600px;
-  text-align: left;
-}
 
 /* Footer */
 .site-footer {
@@ -174,4 +170,37 @@ body {
 
 .btn:hover {
   background-color: #34495e;
+}
+
+.intro {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // Adds space between elements
+}
+
+.intro h1 {
+  margin-bottom: 0; // Remove default margin
+}
+
+.intro p {
+  margin-bottom: 0; // Remove default margin
+}
+
+.intro .btn {
+  align-self: flex-start; // Aligns the button to the left
+}
+
+@media (max-width: 768px) {
+  .intro {
+    text-align: center;
+    align-items: center; // Center items on small screens
+  }
+
+  .intro .btn {
+    align-self: center; // Center the button on small screens
+  }
 }
