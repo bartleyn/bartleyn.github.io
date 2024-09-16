@@ -1,93 +1,10 @@
-/* Footer general styles */
-.site-footer {
-  background-color: #f1f1f1;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 14px;
-  color: #333;
-}
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.footer-heading {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.footer-col-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-}
-
-.footer-col {
-  flex: 1;
-  padding: 10px;
-}
-
-.contact-list,
-.social-media-list {
-  list-style: none;
+/* Reset and base styles */
+* {
+  margin: 0;
   padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 
-.contact-list li,
-.social-media-list li {
-  margin-bottom: 8px;
-}
-
-.social-icon-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-}
-
-/* Styles for icons */
-.icon {
-  display: inline-block;
-  width: 24px; /* Set icon width */
-  height: 24px; /* Set icon height */
-  margin-right: 8px; /* Space between icon and text */
-  vertical-align: middle;
-}
-
-.icon svg {
-  width: 100%; /* Ensure SVG fills parent container */
-  height: 100%;
-  fill: currentColor; /* Inherits text color for easy styling */
-}
-
-.username {
-  margin-left: 5px; /* Adds spacing between icon and username text */
-}
-
-.text {
-  color: #666;
-  margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .footer-col-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .footer-col {
-    margin-bottom: 15px;
-  }
-}
-
-
-
-/* Body and Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
@@ -95,34 +12,43 @@ body {
   color: #333;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-  background-color: #333;
-  padding: 10px 0;
-}
-
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.brand a {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  font-weight: 700;
+/* Navigation */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
 }
 
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
 
-/* Hero Section Styles */
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section */
 .hero {
   background-color: #fff;
   padding: 60px 0;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-content {
@@ -137,7 +63,6 @@ body {
   height: 100px;
   border-radius: 50%;
   margin-right: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .intro {
@@ -145,61 +70,51 @@ body {
   text-align: left;
 }
 
-.intro h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.intro p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #555;
-}
-
-/* Footer Styles */
-footer {
+/* Footer */
+.site-footer {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  margin-top: 40px;
 }
 
-.nav-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-col-wrapper {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.nav-links li {
-  margin-right: 20px;
+.footer-col {
+  margin-bottom: 15px;
 }
 
-.nav-links li:last-child {
-  margin-right: 0;
+.contact-list,
+.social-media-list {
+  list-style: none;
 }
 
-header nav .nav-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.social-icon-link {
   display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
 }
 
-header nav .nav-links li {
-  margin-right: 20px;
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-col-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
