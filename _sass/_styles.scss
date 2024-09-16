@@ -199,3 +199,13 @@ footer {
   margin-right: 0;
 }
 
+header nav .nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav .nav-links li {
+  margin-right: 20px;
+}

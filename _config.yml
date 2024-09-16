@@ -1,8 +1,6 @@
 # Site settings
 title: Nathan Bartley's Research/Personal Site
 email: ntbartley@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-    Computer Science, Complex Systems, and Computational Social Science (rendered in CSS??)
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bartleyn.github.io/" # the base hostname & protocol for your site
 twitter_username: reichaos
