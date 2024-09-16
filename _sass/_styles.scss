@@ -305,3 +305,42 @@ body {
 .cv-skills li {
   margin-bottom: 10px;
 }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-list i {
+  margin-right: 10px;
+  color: #828282;
+}
+
+.social-icon-link, .contact-list li {
+  display: flex;
+  align-items: center;
+  color: #828282;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon-link:hover, .contact-list li:hover {
+  color: #3498db;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.icon svg {
+  fill: currentColor;
+}
