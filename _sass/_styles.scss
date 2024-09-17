@@ -21,8 +21,8 @@ body {
 
 /* Navigation */
 .navbar {
-  background-color: #333;
-  padding: 10px 0;
+  background-color: #2c3e50;  /* Darker blue background */
+  padding: 15px 0;
 }
 
 .nav-links {
@@ -40,8 +40,14 @@ body {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #ecf0f1;  /* Light gray text for better contrast */
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3498db;  /* Bright blue on hover */
 }
 
 /* Hero section */
@@ -160,16 +166,19 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: #2c3e50;
-  color: #fff;
+  background-color: #3498db;  /* Bright blue background */
+  color: #ffffff;  /* White text */
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  font-weight: 500;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .btn:hover {
-  background-color: #34495e;
+  background-color: #2980b9;  /* Darker blue on hover */
 }
 
 .intro {
