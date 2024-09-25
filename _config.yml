@@ -2,8 +2,8 @@
 title: Nathan Bartley's Research/Personal Site
 email: ntbartley(at)gmail.com
 description: >
-  PhD graduate at University of Southern California, researching Recommender Systems
-  applied to Online Social Networks.
+  PhD graduate at University of Southern California, researching recommender systems
+  applied to online social networks.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bartleyn.github.io/" # the base hostname & protocol for your site
 twitter_username: reichaos
