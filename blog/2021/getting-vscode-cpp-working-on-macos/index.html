@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h2 id="connecting-clangc-compiler-to-vscode-macos">Connecting Clang/C++ compiler to VSCode (macOS)</h2> <p>This is a short post meant to step through the steps needed to get Visual Studio code (macOS) to use your clang c++ compiler to build your cpp code.</p> <h3 id="making-sure-you-have-support-for-c">Making sure you have support for c++</h3> <p>You may encounter that you don’t have any formatting colors or other options for any c++ code you write, so as a first step we suggest you install the C++ extension.</p> <p><img src="/assets/images/vscode_1a_cpp.png" alt="Installing c++ extension"></p> <p>You may also need to install clang if you haven’t already. You can do this by running <code class="language-plaintext highlighter-rouge">xcode-select --install</code> in your terminal.</p> <h3 id="writing-up-sample-cpp">Writing up sample .cpp</h3> <p><img src="/assets/images/vscode_1_sample_code.png" alt="Sample cpp file open in editor"></p> <p>After with a fresh sample .cpp file in an open editor. If you want to copy and paste:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    int x = 3;
+    while (x &gt;= 1) {
+        cout &lt;&lt; "lorem" &lt;&lt; endl;
+        cout &lt;&lt; "ipsum";
+        cout &lt;&lt; "do re mi ";
+        cout &lt;&lt; "fa" &lt;&lt; endl;
+        x--;
+    }
+    
+    return 0;
+}
+</code></pre></div></div> <h3 id="building-the-cpp">Building the .cpp</h3> <p>Next we need to give VSCode some instructions for how to actually “build” our code. We do this by specifying commands and instructions through a <code class="language-plaintext highlighter-rouge">tasks.json</code> file. When you go to Terminal -&gt; Run Build Task you will be presented with a search bar and a result saying there is no build task. We will configure this to add a build command.</p> <p><img src="/assets/images/vscode_2_build_task.png" alt=""></p> <p>This will open a tasks.json file that is empty. Here is my tasks.json file contents:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+        // See https://go.microsoft.com/fwlink/?LinkId=733558
+        // for the documentation about the tasks.json format
+        "version": "2.0.0",
+        "tasks": [
+          {
+            "type": "shell",
+            "label": "clang++ build active file",
+            "command": "/usr/bin/clang++",
+            "args": [
+              "-std=c++17",
+              "-stdlib=libc++",
+              //"-v",
+              "-g",
+              "${file}",
+              "-o",
+              "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+              "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                }
+              },
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+          }
+        ]
+      }
+    
+</code></pre></div></div> <h4 id="actually-building">Actually Building!</h4> <p>Now we can try to run the build task again:</p> <p><img src="/assets/images/vscode_4_build_task_run.png" alt=""></p> <p>We get a terminal at the bottom reporting that the build task was run successfully.</p> <p>###Just regularly compiling</p> <p>If you wanted to skip the “build task” setup step and just jump to compiling via the terminal yourself, you can use clang like you would use gcc/g++: <code class="language-plaintext highlighter-rouge">clang++ vscode_test.cpp -o vscode_test</code></p> <h3 id="running-the-code">Running the code</h3> <p>Depending on how you specify your tasks in tasks.json you can determine where the compiled code will go. In this example it stays in the same workspace directory, so we can run <code class="language-plaintext highlighter-rouge">./vscode_test</code> directly.</p> <p><img src="/assets/images/vscode_5_terminal_done.png" alt=""></p> <p>There you go!</p> </body></html>

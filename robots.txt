@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://bartleyn.github.io//sitemap.xml
