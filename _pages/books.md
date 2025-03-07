@@ -11,3 +11,4 @@ collection: books
 ## Books that I am reading, have read, or will read
 
 Finished Andy Weir's Project Hail Mary
+Reading Lady Joker
