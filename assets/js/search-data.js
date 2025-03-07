@@ -512,9 +512,9 @@ ninja.data = [{
           section: "News",},{id: "news-got-my-degree",
           title: 'Got my degree!',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-auditing-algorithmic-bias-on-twitter",
+          title: 'Auditing Algorithmic Bias on Twitter',
+          description: "Description of previous audit",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{
