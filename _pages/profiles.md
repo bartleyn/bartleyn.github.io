@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: people
-description: Just me in the group (and my wife)
+description: Just me in the group
 nav: true
 nav_order: 7
 
@@ -16,7 +16,7 @@ profiles:
     more_info: >
       
   - align: left
-    image: proffile_pic.jpg
+    image: profile_pic.jpg
     content: about.md
     image_circular: false # crops the image to make it circular
     more_info: >
