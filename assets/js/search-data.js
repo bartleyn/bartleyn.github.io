@@ -512,9 +512,9 @@ ninja.data = [{
           section: "News",},{id: "news-got-my-degree",
           title: 'Got my degree!',
           description: "",
-          section: "News",},{id: "projects-auditing-algorithmic-bias-on-twitter",
-          title: 'Auditing Algorithmic Bias on Twitter',
-          description: "Description of previous audit",
+          section: "News",},{id: "projects-auditing-algorithmic-bias-on-twitter-part-1",
+          title: 'Auditing Algorithmic Bias on Twitter (Part 1)',
+          description: "Description of Twitter Audit in 2021",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{
