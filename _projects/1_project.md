@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Auditing Algorithmic Bias on Twitter (Part 1)
-description: Description of Twitter Audit in 2021
+title: Auditing Algorithmic Bias on Twitter
+description: Description of Twitter Audits in 2021-2022
 img: assets/img/algo_audit/X_bias_post.png
 importance: 1
 category: work
@@ -27,10 +27,10 @@ These accounts would log-in all around the same time every day and scroll for ab
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/age_tweets.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/age_tweets.png" title="Age of Tweets Seen" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/final_likes.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/final_likes.png" title="# of Final Likes" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -38,6 +38,11 @@ These accounts would log-in all around the same time every day and scroll for ab
 </div>
 
 Ultimately, because of the limitations of this study, we figured that the methodology was worth extending -- both in terms of scale and duration -- but that the results of this audit did not really reveal anything substantial besides the differences mentioned above. 
+This study is written up in Bartley et al., 2021 {% cite bartley2021auditing %}.
 
-We also wanted to know more about the *fraction* of people that made up your feed: how often do personalized timelines observe people with category A and how often do they observe people with category B? Because social media is fundamentally **social** we decided to study how these platforms might shape your perception of your social environment online. We discuss this in the next part. 
+We also wanted to know more about the *fraction* of people that made up your feed: how often do personalized timelines observe people with category A and how often do they observe people with category B? Because social media is fundamentally **social** we decided to study how these platforms might shape your perception of your social environment online. 
 
+
+<!-- ### Larger-Scale Audit
+
+ We built on top of this study by running approx. 30 sock puppet accounts for ten months between 2021-2022. -->
