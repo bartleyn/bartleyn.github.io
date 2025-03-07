@@ -2,4 +2,19 @@
   - firstname: ["Kristina", "K.", ]
     url: https://scholar.google.com/citations?user=Cz6vH68AAAAJ&hl=en&oi=sra
 
+"burghardt":
+  - firstname: ["Keith"]
+    url: https://scholar.google.com/citations?user=rUMWF7kAAAAJ&hl=en&oi=ao
+
+"abeliuk":
+  - firstname: ["Andres", "Andrés"]
+    url: https://scholar.google.com/citations?user=qKqH1lcAAAAJ&hl=en&oi=ao
+  
+"ferrara": 
+  - firstname: ["Emilio"]
+    url: https://scholar.google.com/citations?hl=en&authuser=1&user=0r7Syh0AAAAJ
+
+"yiqi":
+  - firstname: ["Yiqi"]
+    url: https://scholar.google.com/citations?hl=en&user=fp2qSJUAAAAJ
 
