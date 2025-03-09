@@ -43,6 +43,6 @@ This study is written up in Bartley et al., 2021 {% cite bartley2021auditing %}.
 We also wanted to know more about the *fraction* of people that made up your feed: how often do personalized timelines observe people with category A and how often do they observe people with category B? Because social media is fundamentally **social** we decided to study how these platforms might shape your perception of your social environment online. 
 
 
-<!-- ### Larger-Scale Audit
+### Larger-Scale Audit
 
- We built on top of this study by running approx. 30 sock puppet accounts for ten months between 2021-2022. -->
+ We built on top of this study by running approx. 30 sock puppet accounts for ten months between 2021-2022. This gave us the ability to assess with some stronger degree of certainty the effects of recommender systems on **who** users get exposed to in their timelines, even when controlling for user behavior (as best as one can in a production online ecosystem)

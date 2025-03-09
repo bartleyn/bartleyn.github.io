@@ -1,6 +1,7 @@
 # Perpetually Imperfect
 
-Data is hot these days. Some might say it has always been hot, but it's hard to dispute the very focused hype of the last couple years around big data and data science. 
+
+
 
 PICTURE 1
 PICTURE 2
