@@ -41,7 +41,15 @@ Which suggests that we should install version 5.7.4 as that must have been the l
 ###Downloading MySQL
 If you need to download an older version of MySQL you can navigate to [this archive page](https://downloads.mysql.com/archives/community/):
 
-![MySQL Archive page](/assets/img/mysql_archive.png)
+<div class="row mt-1">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/mysql_archive.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<caption class="caption">
+        MySQL Archive page
+</caption>
+<!-- ![MySQL Archive page](/assets/img/mysql_archive.png) -->
 
 We downloaded the .tar ball for the RPM bundle (345 M at the top). 
 
@@ -52,7 +60,7 @@ After downloading the tar ball we extract and run
 
 on each of the `.rpm` files you need (for us this was the server, client, and shared). 
 
-[](https://web.archive.org/web/20170810042727/https://dev.mysql.com/doc/refman/5.5/en/mysql-install-db.html)
+[Archive link](https://web.archive.org/web/20170810042727/https://dev.mysql.com/doc/refman/5.5/en/mysql-install-db.html)
 
 Since we are using version 5.7.4 we can call mysql_install_db to do some heavy lifting in setup:
 ```
