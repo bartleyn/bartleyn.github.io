@@ -1,9 +1,12 @@
-<!-----
+---
 layout: post
-title:  "Status Update"
-date:   2021-10-19 21:23:00
-categories: jekyll update
------>
+title: Recovering MySQL data from .MYI, .MYD, .FRM files
+date: 2021-10-25 21:01:00
+description: Saving you some trouble getting data out of your files
+tags: MySQL Hexdump
+categories: debugging
+thumbnail: assets/img/mysql_log.png
+---
 
 ## Recovering MySQL data from .MYI, .MYD, .FRM files
 
@@ -38,7 +41,7 @@ Which suggests that we should install version 5.7.4 as that must have been the l
 ###Downloading MySQL
 If you need to download an older version of MySQL you can navigate to [this archive page](https://downloads.mysql.com/archives/community/):
 
-![MySQL Archive page](/assets/images/mysql_archive.png)
+![MySQL Archive page](/assets/img/mysql_archive.png)
 
 We downloaded the .tar ball for the RPM bundle (345 M at the top). 
 

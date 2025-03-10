@@ -45,4 +45,20 @@ We also wanted to know more about the *fraction* of people that made up your fee
 
 ### Larger-Scale Audit
 
- We built on top of this study by running approx. 30 sock puppet accounts for ten months between 2021-2022. This gave us the ability to assess with some stronger degree of certainty the effects of recommender systems on **who** users get exposed to in their timelines, even when controlling for user behavior (as best as one can in a production online ecosystem)
+ We built on top of this study by running approx. 30 sock puppet accounts for ten months between 2021-2022. This gave us the ability to assess with some stronger degree of certainty the effects of recommender systems on **who** users get exposed to in their timelines, even when controlling for user behavior (as best as one can in a production online ecosystem). 
+
+ We made each of these accounts follow the same set of users, half of whom were identified/labelled with previous research methods as pro-science and half who were labelled as anti-science. The goal was to have the following breakdown between accounts:
+
+- Some would behave randomly on the platform, ocassionally liking tweets with no preference as to their label
+    - Half of these would be assigned to the personalized timeline
+    - The other half would be assigned to the chronological timeline
+
+- Some would behave biased towards anti-science users
+    - Half of these would be assigned to the personalized timeline
+    - The other half would be assigned to the chronological timeline
+
+- Some would behave biased towards pro-science users
+    - Half of these would be assigned to the personalized timeline
+    - The other half would be assigned to the chronological timeline
+
+This allowed us to analyze structural differences between timelines while trying to account for the differences in user behavior.
