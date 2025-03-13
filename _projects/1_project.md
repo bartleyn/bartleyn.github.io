@@ -10,7 +10,7 @@ giscus_comments: true
 ---
 
 <div class="row">
-    <div class="col-sm-8 mt-3 mt-md-0">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/algo_audit/timeline.png" title="timeline" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -27,10 +27,10 @@ These accounts would log-in all around the same time every day and scroll for ab
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/age_tweets.png" title="Age of Tweets Seen" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/algo_audit/age_tweets.png" title="Age of Tweets Seen" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/final_likes.png" title="# of Final Likes" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/algo_audit/final_likes.png" title="# of Final Likes" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -38,11 +38,27 @@ These accounts would log-in all around the same time every day and scroll for ab
 </div>
 
 Ultimately, because of the limitations of this study, we figured that the methodology was worth extending -- both in terms of scale and duration -- but that the results of this audit did not really reveal anything substantial besides the differences mentioned above. 
-This study is written up in Bartley et al., 2021 {% cite bartley2021auditing %}.
+This study is written up in {% cite bartley2021auditing %}.
 
 We also wanted to know more about the *fraction* of people that made up your feed: how often do personalized timelines observe people with category A and how often do they observe people with category B? Because social media is fundamentally **social** we decided to study how these platforms might shape your perception of your social environment online. 
 
 
 ### Larger-Scale Audit
 
- We built on top of this study by running approx. 30 sock puppet accounts for ten months between 2021-2022. This gave us the ability to assess with some stronger degree of certainty the effects of recommender systems on **who** users get exposed to in their timelines, even when controlling for user behavior (as best as one can in a production online ecosystem)
+ We built on top of this study by running approx. 30 sock puppet accounts for ten months between 2021-2022. This gave us the ability to assess with some stronger degree of certainty the effects of recommender systems on **who** users get exposed to in their timelines, even when controlling for user behavior (as best as one can in a production online ecosystem). 
+
+ We made each of these accounts follow the same set of users, half of whom were identified/labelled with previous research methods as pro-science and half who were labelled as anti-science. The goal was to have the following breakdown between accounts:
+
+- Some would behave randomly on the platform, ocassionally liking tweets with no preference as to their label
+    - Half of these would be assigned to the personalized timeline
+    - The other half would be assigned to the chronological timeline
+
+- Some would behave biased towards anti-science users
+    - Half of these would be assigned to the personalized timeline
+    - The other half would be assigned to the chronological timeline
+
+- Some would behave biased towards pro-science users
+    - Half of these would be assigned to the personalized timeline
+    - The other half would be assigned to the chronological timeline
+
+This allowed us to analyze structural differences between timelines while trying to account for the differences in user behavior. You can read more of the results in the paper {% cite bartley2024auditing %}.
