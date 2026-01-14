@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-recovering-mysql-data-from-myi-myd-frm-files",
+            },{id: "post-setting-up-your-own-ollama-llm-agent",
+      
+        title: "Setting up your own Ollama LLM agent",
+      
+      description: "Setting up your own LLM for VS Code &amp; Web search",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/setting-up-remote-chat-ollama/";
+        
+      },
+    },{id: "post-recovering-mysql-data-from-myi-myd-frm-files",
       
         title: "Recovering MySQL data from .MYI, .MYD, .FRM files",
       
@@ -94,7 +105,17 @@ ninja.data = [{
           window.location.href = "/blog/2021/getting-vscode-cpp-working-on-macos/";
         
       },
-    },{id: "books-lady-joker-volume-one",
+    },{id: "books-annihilation",
+          title: 'Annihilation',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/Annihilation/";
+            },},{id: "books-",
+          title: '',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/Kenobi/";
+            },},{id: "books-lady-joker-volume-one",
           title: 'Lady Joker (Volume One)',
           description: "",
           section: "Books",handler: () => {
