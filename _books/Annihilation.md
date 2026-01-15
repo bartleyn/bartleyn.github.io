@@ -13,7 +13,7 @@ finished: 2026-01-14
 released: 
 stars: 4.5
 goodreads_review: 
-status: Done
+status: Finished
 ---
 
 Great book. I enjoyed the flawed narrator perspective, and the fact that no names are used for any of the characters in the book, save for the names the human characters give other entities. 

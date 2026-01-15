@@ -2,7 +2,7 @@
 layout: post
 title: Setting up your own Ollama LLM agent
 date: 2026-01-04 17:17:16
-description: Setting up your own LLM for VS Code & Web search
+description: Set up your own local LLM
 tags: llm agent
 categories: projects
 ---
@@ -44,7 +44,7 @@ You should see a line that reads: `ollama version is x.xx.x`
 
 Take a look at the rest of the interface if you're not familiar with it. If you issue a simple `ollama` command you should see the list of commands and flags you can run:
 
-```
+```bash
 Usage:
   ollama [flags]
   ollama [command]
@@ -160,6 +160,7 @@ docker compose up -d
 
 If you have gotten to this point, you should be able to talk with your Ollama model separately, and you should have a docker container running for your nginx/searXNG setup. Now we need to start to hook things up so that the model you'll interact with can actually issue web-searches. Here's an example of what the tool server can look like:
 
+````markdown
 ```Python
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -228,6 +229,7 @@ async def open_url(req: OpenReq):
        text = text[:req.max_chars] + "\n..."
    return {"title": title, "url": req.url, "text":text}
 ```
+````
 
 You can run this with a command like: 
 
@@ -237,6 +239,7 @@ You can run this with a command like:
 
 Now we need a means to connect the model with the tool server, and then connect the model with the user. Here's an example uvicorn script we can run for this:
 
+````markdown
 ```Python
 
 import json
@@ -354,6 +357,7 @@ def chat(payload: ChatIn):
     logger.debug("Raw reply: %s", assistant)
     return {"reply": assistant}
 ```
+````
 
 Run the chat gateway much like the toolserver:
 
@@ -361,6 +365,7 @@ Run the chat gateway much like the toolserver:
 
 Now you should have the ability to POST a request to your chat gateway that will respond to a message you send it. For instance
 
+````markdown
 ```bash
 curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \                                                                                  
   -H "Content-Type: application/json" \
@@ -369,9 +374,11 @@ curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \
 
 {"reply":"Hi back! How can I help you today?"}
 ```
+````
 
 You can also confirm that it can web-search with a specific query that is past it's training date:
 
+````markdown
 ```bash
 
 curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \                                                    
@@ -381,12 +388,14 @@ curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \
 
 {"reply":"Here’s a summary of recent news regarding Venezuela, as of the search results:\n\nAs of today, January 9, 2026, the United States has seized its fifth oil tanker linked to Venezuela (https://abcnews.go.com/International/live-updates/venezuela-live-updates-trump-give-details-after-us/?id=127792811). U.S. President Donald Trump met with oil company executives to discuss Venezuela (https://www.reuters.com/world/venezuela/). The U.S. has long demanded the release of detained Venezuelan President Nicolás Maduro (https://www.bbc.com/news/topics/cg41ylwvwgxt).  Venezuelaanalysis provides ongoing news and analysis (https://venezuelanalysis.com/)."}
 ```
+````markdown
 
 
 ## Chat Gradio UI
 
 If that wasn't enough for you, and you want some sort of UI to interact with the model, we'll run through a simple Gradio UI that can start as a means for replicating your own ChatGPT-like interface
 
+````markdown
 ```Python
 import requests
 import gradio as gr
@@ -425,6 +434,7 @@ demo = gr.Interface(
 if __name__ == '__main__':
   demo.launch(server_name="[remote_machine_tailscale_interface]", server_port=[ui_port])
 ```
+````
 
 This should give you the a rough interface that you can log into on your local machine's browser (http://xyz:port)! 
 

@@ -13,7 +13,7 @@ finished: 2026-01-07
 released: 07-12-2022
 stars: 3.5
 goodreads_review: 
-status: Done
+status: Finished
 ---
 
 Definitely a slow-burn at the start, but once the 'heist' is planned and once you get past the middle of the novel, it definitely picks up. 

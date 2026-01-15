@@ -13,7 +13,7 @@ finished: 2026-01-06
 released: 
 stars: 4
 goodreads_review: 
-status: Done
+status: Finished
 ---
 
 You definitely get what's on the tin. It's written as a western, with a sense of scale that was much smaller than any other Star Wars media I've consumed, and it tells you that directly. 
