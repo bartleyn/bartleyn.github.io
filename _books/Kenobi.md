@@ -4,12 +4,13 @@ title: Star Wars: Kenobi
 author: John Jackson Miller
 cover: assets/img/book_covers/kenobi.jpg
 olid:  # use Open Library ID to fetch cover (if no `cover` is provided)
-isbn:  978-0593497029 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
+isbn:  9780593497029 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
 categories: sci-fi
 tags: top-100
 buy_link: 
 started: 2025-12-27
 finished: 2026-01-06
+year_finished: 2026
 released: 
 stars: 4
 goodreads_review: 

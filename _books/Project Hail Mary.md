@@ -10,6 +10,7 @@ tags: top-100
 buy_link: https://bookshop.org/p/books/project-hail-mary-andy-weir/18644162?ean=9780593135211&next=t
 started: 2025-02-13
 finished: 2025-03-01
+year_finished: 2025
 released: 
 stars: 4
 goodreads_review: 

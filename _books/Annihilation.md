@@ -4,12 +4,13 @@ title: Annihilation
 author: Jeff VanderMeer
 cover: assets/img/book_covers/annihilation.jpg
 olid:  # use Open Library ID to fetch cover (if no `cover` is provided)
-isbn:  978-1250824042 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
+isbn:  9781250824042 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
 categories: sci-fi
 tags: top-100
 buy_link: 
 started: 2026-01-08
 finished: 2026-01-14
+year_finished: 2026
 released: 
 stars: 4.5
 goodreads_review: 
