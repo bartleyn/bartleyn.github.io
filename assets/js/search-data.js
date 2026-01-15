@@ -115,8 +115,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/Kenobi/";
-            },},{id: "books-lady-joker-volume-one",
-          title: 'Lady Joker (Volume One)',
+            },},{id: "books-lady-joker-vol-1",
+          title: 'Lady Joker Vol 1',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/Lady%20Joker/";
