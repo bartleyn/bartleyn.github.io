@@ -76,7 +76,7 @@ ninja.data = [{
       
         title: "Setting up your own Ollama LLM agent",
       
-      description: "Setting up your own LLM for VS Code &amp; Web search",
+      description: "Set up your own local LLM",
       section: "Posts",
       handler: () => {
         
