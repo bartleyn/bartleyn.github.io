@@ -10,6 +10,14 @@
   crossorigin="anonymous"
 >
 
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+
+<script>
+  if (location.hostname === "www.bartleyn.github.io") {
+    location.replace("https://bartleyn.github.io" + location.pathname);
+  }
+</script>
+
 {% if page.pretty_table %}
   <!-- Bootstrap Table -->
   <link
