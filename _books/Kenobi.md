@@ -1,6 +1,6 @@
 ---
 layout: book-review
-title: Star Wars: Kenobi
+title: Star Wars\: Kenobi
 author: John Jackson Miller
 cover: assets/img/book_covers/kenobi.jpg
 olid:  # use Open Library ID to fetch cover (if no `cover` is provided)

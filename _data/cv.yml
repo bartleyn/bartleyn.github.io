@@ -30,6 +30,11 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Senior Data Scientist
+      institution: Favorited
+      year: 2025
+      description:
+        - Owned Business Intelligence, Product Analytics, and Fraud/Trust & Safety data efforts for a live-streaming social media platform
     - title: Ph.D. Student
       institution: Information Sciences Institute, University of Southern California
       year: 2017 - 2024

@@ -23,7 +23,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Welcome to my academic website! I am a recent PhD graduate at University of Southern California. My research focuses on recommender systems applied to online social networks.
+I received my PhD from the University of Southern California, where my research focused on recommender systems and exposure bias in online social networks. I'm currently doing independent research on decentralized social media platforms, particularly within the Bluesky/AT Protocol ecosystem.
 
 
 
