@@ -136,12 +136,22 @@ ninja.data = [{
           description: "Description of Twitter Audits in 2021-2022",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-at-protocol-infrastructure-health",
+          title: 'AT Protocol Infrastructure Health',
+          description: "Analyzing the activity and geographic distribution of Personal Data Servers (PDSes) to assess how truly decentralized the Bluesky/AT Protocol ecosystem is.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-bluesky-feed-toxicity-analysis",
+          title: 'Bluesky Feed Toxicity Analysis',
+          description: "Demonstrating the importance of context in assessing online toxicity, with an ML pipeline for scoring and analyzing posts from Bluesky curated feeds.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
             },},{
         id: 'social-bluesky',
         title: 'Bluesky',
         section: 'Socials',
         handler: () => {
-          window.open("nbartley# your bluesky URL", "_blank");
+          window.open("nbartley.bsky.social", "_blank");
         },
       },{
         id: 'social-email',
@@ -156,6 +166,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://github.com/bartleyn", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/ntbartley", "_blank");
         },
       },{
         id: 'social-rss',
