@@ -9,12 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
-          description: "",
+  },{id: "nav-projects",
+          title: "projects",
+          description: "A growing collection of my projects.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-publications",
           title: "publications",
@@ -23,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of my projects.",
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/blog/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -51,28 +51,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-people",
-          title: "people",
-          description: "Just me in the group",
+        },{id: "nav-bookshelf",
+          title: "bookshelf",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/people/";
+            window.location.href = "/books/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-setting-up-your-own-ollama-llm-agent",
+        },{id: "post-setting-up-your-own-ollama-llm-agent",
       
         title: "Setting up your own Ollama LLM agent",
       
@@ -133,7 +119,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-auditing-algorithmic-bias-on-twitter",
           title: 'Auditing Algorithmic Bias on Twitter',
-          description: "Description of Twitter Audits in 2021-2022",
+          description: "Sock-puppet audits of Twitter&#39;s personalized timeline, measuring how the algorithm shapes what, and whom, users are exposed to compared to a chronological feed.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-at-protocol-infrastructure-health",
@@ -146,6 +132,16 @@ ninja.data = [{
           description: "Demonstrating the importance of context in assessing online toxicity, with an ML pipeline for scoring and analyzing posts from Bluesky curated feeds.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
+            },},{id: "projects-feed-discovery-on-bluesky",
+          title: 'Feed Discovery on Bluesky',
+          description: "A &quot;feed of feeds&quot; — a custom Bluesky feed generator that uses a multi-armed bandit to recommend other people&#39;s feeds.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-toxicity-model-ci-cd",
+          title: 'Toxicity Model CI/CD',
+          description: "An end-to-end pipeline for training, evaluating, promoting, and serving a text toxicity model behind a live scoring API.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
             },},{
         id: 'social-bluesky',
         title: 'Bluesky',
