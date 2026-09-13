@@ -195,6 +195,11 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  img.rounded-circle {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -667,13 +672,37 @@ footer.sticky-bottom {
   }
 
   .card {
+    border: 1px solid var(--global-divider-color);
+    border-top: 3px solid var(--global-theme-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
     img {
       width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--global-text-color-light);
     }
   }
 
   .col {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 
   .grid-sizer,
@@ -683,7 +712,7 @@ footer.sticky-bottom {
   }
 
   h2.category {
-    color: var(--global-divider-color);
+    color: var(--global-text-color-light);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
     margin-top: 2rem;

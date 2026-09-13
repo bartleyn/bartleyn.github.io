@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: USC. ntbartley (at) gmail.com
+subtitle: Independent researcher · decentralized social media, recommender systems, trust and safety · ntbartley (at) gmail.com
 profile:
   align: right
   image: profile_pic.jpg
@@ -25,6 +25,11 @@ latest_posts:
 
 I received my PhD from the University of Southern California, where my research focused on recommender systems and exposure bias in online social networks. I'm currently doing independent research on decentralized social media platforms, particularly within the Bluesky/AT Protocol ecosystem.
 
+**Currently working on:**
 
+- [AT Protocol Infrastructure Health](/projects/2_project/): how decentralized is Bluesky in practice? ([live dashboard](https://atproto.barn.city))
+- [Feed Discovery](/projects/4_project/): a bandit-driven "feed of feeds" that helps people find custom feeds on Bluesky
+- [Toxicity Model CI/CD](/projects/5_project/) and [Feed Toxicity Analysis](/projects/3_project/): context-aware content scoring, from training to a live API
 
+[See all projects →](/projects/)
 

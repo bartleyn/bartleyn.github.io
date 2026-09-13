@@ -34,7 +34,10 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($purple-color, 0.05);
+$accent-color: #1d5fbf !default;
+$accent-color-dark: #6ea8fe !default;
+
+$code-bg-color-light: rgba($accent-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
 // Font awesome location

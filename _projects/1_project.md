@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Auditing Algorithmic Bias on Twitter
-description: Description of Twitter Audits in 2021-2022
+description: Sock-puppet audits of Twitter's personalized timeline, measuring how the algorithm shapes what, and whom, users are exposed to compared to a chronological feed.
 img: assets/img/algo_audit/X_bias_post.png
 importance: 1
 category: work
