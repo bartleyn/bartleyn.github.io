@@ -23,13 +23,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I received my PhD from the University of Southern California, where my research focused on recommender systems and exposure bias in online social networks. I'm currently doing independent research on decentralized social media platforms, particularly within the Bluesky/AT Protocol ecosystem.
-
-**Currently working on:**
-
-- [AT Protocol Infrastructure Health](/projects/2_project/): how decentralized is Bluesky in practice? ([live dashboard](https://atproto.barn.city))
-- [Feed Discovery](/projects/4_project/): a bandit-driven "feed of feeds" that helps people find custom feeds on Bluesky
-- [Toxicity Model CI/CD](/projects/5_project/) and [Feed Toxicity Analysis](/projects/3_project/): context-aware content scoring, from training to a live API
+I received my PhD from the University of Southern California, where my research focused on recommender systems and exposure bias in online social networks. I'm currently building youth-AI safety benchmarks for LLMs with Apgard AI. I am also pursuing independent research on decentralized social media platforms, particularly within the Bluesky/AT Protocol ecosystem.
 
 [See all projects →](/projects/)
 
