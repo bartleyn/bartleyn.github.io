@@ -1,22 +1,17 @@
 ---
 layout: page
 title: Toxicity Model CI/CD
-description: An end-to-end pipeline for training, evaluating, promoting, and serving a text toxicity model behind a live scoring API.
+description: Practicing the full lifecycle of a text toxicity model, from training and evaluation to deploying it behind an API that other projects can use.
 importance: 5
 category: work
 related_publications: false
 ---
 
-Most toxicity-detection work stops at a notebook. This project is about everything that comes after: getting a model trained, evaluated against explicit promotion criteria, deployed, and kept up to date as a service other tools can actually call.
+A lot of toxicity detection work stops at the notebook stage. I wanted to practice building a service end-to-end: training a model, checking it against some explicit criteria before it goes out, deploying it, and keeping it updated as an API that my other tools can actually call.
 
-The model is deliberately simple to start (TF-IDF features with logistic regression), so the focus stays on the pipeline around it:
+To keep things simple at first the model is just TF-IDF features with logistic regression. Each training run is versioned and saves the model along with a held-out eval set, and the evaluation step reports AUC, precision, recall, F1, and specificity. A promotion script then checks those metrics against thresholds in a config file, and only if the model passes does it become the `latest` version. That version gets served through a FastAPI service that returns toxicity, sentiment, and hate speech scores for each text (with PII detection along the way). GitHub Actions runs CI on every change and handles deploying the promoted model.
 
-- **Train & evaluate** — versioned training runs save model artifacts alongside a held-out eval set, and evaluation reports AUC, precision, recall, F1, and specificity.
-- **Promote** — a rule-based promotion step checks those metrics against configured thresholds before a version becomes `latest`.
-- **Serve** — a FastAPI service returns toxicity, sentiment, and hate-speech scores per text, with PII detection in the loop.
-- **Ship** — GitHub Actions runs CI on every change and continuously deploys the promoted model.
-
-It powers the scoring in the [Bluesky Feed Toxicity Analysis](/projects/3_project/) project.
+This is what does the scoring for the [Bluesky Feed Toxicity Analysis](/projects/3_project/) project. Here's what a request looks like:
 
 ```bash
 curl -X POST <api-host>/score \

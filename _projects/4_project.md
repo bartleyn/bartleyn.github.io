@@ -1,24 +1,22 @@
 ---
 layout: page
 title: Feed Discovery on Bluesky
-description: A "feed of feeds" — a custom Bluesky feed generator that uses a multi-armed bandit to recommend other people's feeds.
+description: A custom Bluesky feed that recommends other people's feeds, using a multi-armed bandit to decide which ones to show you.
 importance: 4
 category: work
 related_publications: false
 ---
 
-Bluesky lets anyone publish a custom feed, and there are now thousands of them. Most people never find more than a handful. This project flips the usual feed generator around: instead of serving posts on a single topic, it serves a _feed of feeds_. Each page is a set of short chunks pulled live from other feed generators, so scrolling becomes a tour of the Bluesky feed ecosystem rather than a single timeline.
+Anyone can publish a custom feed on Bluesky, and there are at least 100,000 of them on record at this point. But how many does the average person actually find? Probably just a handful. So instead of building another feed that serves posts on one topic, I wanted to build a *feed of feeds*: each time you load it you get a few short chunks of posts pulled live from other feed generators, so as you scroll you get a sample of what's out there.
 
-It's live as a custom feed on Bluesky (`did:web:feeds.barn.city`).
+You can find it live on Bluesky as a custom feed (`did:web:feeds.barn.city`).
 
 ### How it works
 
-Every request selects a slate of candidate feeds, fetches a chunk of posts from each in parallel under a hard two-second budget, filters harmful posts, and assembles the chunks into one response. Each post is tagged with the feed it came from, so likes, reposts, and other interactions can be attributed back to the feed that surfaced it.
+When a request comes in, the service picks a slate of candidate feeds, grabs a chunk of posts from each of them in parallel, filters out harmful posts, and stitches the chunks together into one response. If a feed is too slow it just gets dropped for that request. Each post is tagged with the feed it came from, which means when someone likes or reposts something we can attribute that interaction back to the right feed.
 
-Feed selection is a Thompson-sampling multi-armed bandit: each (user, feed) pair keeps a Beta posterior that's updated from those attributed interactions. That works well for cold-start exploration. The feeds are also clustered by theme (BERTopic / k-means), and early results suggest a hybrid content + collaborative-filtering approach tuned toward novelty is the more rewarding direction.
+Right now the feed selection is a Thompson sampling multi-armed bandit, where each (user, feed) pair has a Beta posterior that gets updated from those interactions. This works pretty well for exploring when we don't know anything about a user yet. I've also clustered the feeds by theme (BERTopic and k-means), and what I've seen so far suggests that a hybrid content + collaborative filtering approach that leans toward **novelty** is the more rewarding direction to take this.
 
-### Stack
-
-FastAPI · PostgreSQL / SQLAlchemy · Airflow for feed liveness and layout refreshes · AT Protocol feed generator API
+The service is written with FastAPI and PostgreSQL, with Airflow jobs that check whether feeds are still alive and refresh the layout.
 
 [View on GitHub](https://github.com/bartleyn/feed-discovery)

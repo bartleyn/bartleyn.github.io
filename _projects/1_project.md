@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Auditing Algorithmic Bias on Twitter
-description: Sock-puppet audits of Twitter's personalized timeline, measuring how the algorithm shapes what, and whom, users are exposed to compared to a chronological feed.
+description: Using sock puppet accounts to audit how Twitter's personalized timeline differs from the chronological one in what (and who) users end up seeing.
 img: assets/img/algo_audit/X_bias_post.png
 importance: 1
 category: work

@@ -8,16 +8,14 @@ category: work
 related_publications: false
 ---
 
-The [AT Protocol](https://atproto.com/) underpinning Bluesky promises a decentralized social media ecosystem where users can host their own data on Personal Data Servers (PDSes). But how decentralized is it in practice?
+The [AT Protocol](https://atproto.com/) underpinning Bluesky promises a decentralized social media ecosystem where users can host their own data on Personal Data Servers (PDSes). But how can we measure that decentralization in practice?
 
 This project monitors PDS activity across the network, tracking where PDSes are hosted geographically and how actively they are being used. The goal is to provide a dynamic and empirical picture of the ecosystem's decentralization. If BlueSky PBC were to go offline tomorrow, how would the system fare?
 
-The dashboard is organized around three questions:
+The dashboard is split into several pages. The first looks at the infrastructure itself: where PDSes are located, who is hosting them, what software versions they're running, and how concentrated users are across servers.
 
-- **Infrastructure** — Where are PDSes located, who hosts them, what software versions do they run, and how concentrated are users across them? A sample of the Jetstream firehose separates genuine cross-party federation from traffic between Bluesky's own internal shards.
-- **Longevity** — How old is the independent PDS ecosystem? When servers launched, how account cohorts are distributed, and how account creation is trending week over week.
-- **Migrations** — Using the PLC directory's operation log: how many accounts have moved, where they went, and the multi-hop paths they took to get there.
+The second page is about longevity -- how old is the independent PDS ecosystem, really? It shows when servers launched, how account cohorts are distributed over time, and how account creation is trending week to week. The third page uses the PLC directory's operation log to look at migrations: how many accounts have moved, where they ended up, and the paths they took to get there (some accounts hop around more than once).
 
-Collectors write append-only snapshots to SQLite on independent schedules, so history is preserved and the dashboard always shows the freshest data for each view. Built with Next.js, SQLite, and Recharts.
+Each collector writes snapshots to a SQLite database on its own schedule, so we keep the history and each view shows the most recent data available. The dashboard itself is built with Next.js and Recharts.
 
 [Live Dashboard](https://atproto.barn.city) | [View on GitHub](https://github.com/bartleyn/atproto-health)
