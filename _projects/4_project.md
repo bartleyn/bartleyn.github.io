@@ -7,7 +7,7 @@ category: work
 related_publications: false
 ---
 
-Anyone can publish a custom feed on Bluesky, and there are at least 100,000 of them on record at this point. But how many does the average person actually find? Probably just a handful. So instead of building another feed that serves posts on one topic, I wanted to build a *feed of feeds*: each time you load it you get a few short chunks of posts pulled live from other feed generators, so as you scroll you get a sample of what's out there.
+Anyone can publish a custom feed on Bluesky, and there are at least 100,000 of them on record at this point. But how many does the average person actually find? Probably just a handful. So instead of building another feed that serves posts on one topic, I wanted to build a _feed of feeds_: each time you load it you get a few short chunks of posts pulled live from other feed generators, so as you scroll you get a sample of what's out there.
 
 You can find it live on Bluesky as a custom feed (`did:web:feeds.barn.city`).
 

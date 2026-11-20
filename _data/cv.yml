@@ -57,7 +57,7 @@
       institution: Knowledge Lab, University of Chicago, Chicago.
       year: 2015 - 2017
       description:
-        - Analyzed 100,000 scientific articles with word embeddings 
+        - Analyzed 100,000 scientific articles with word embeddings
         - Developed new database schema for scientific publication repositories
         - Ran custom experiments on Amazon Mechanical Turk
         - Pulled, processed, and analyzed publication data for understanding non-profit research grants and their influence in seeding new areas of research

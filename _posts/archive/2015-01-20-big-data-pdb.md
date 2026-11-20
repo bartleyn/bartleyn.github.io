@@ -6,5 +6,3 @@ categories: jekyll update
 ----->
 
 Under construction. Expanding upon my write-up for this final class project.
-
-

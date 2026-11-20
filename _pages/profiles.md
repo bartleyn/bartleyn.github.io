@@ -11,8 +11,7 @@ profiles:
   # and create one content file for each profile inside _pages/
   - align: right
     image: profile_pic.png
-    
+
     image_circular: false # crops the image to make it circular
     more_info: >
-      
 ---

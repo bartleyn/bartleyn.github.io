@@ -26,7 +26,7 @@ curl -X POST <api-host>/score \
   "results": [
     {
       "label": 1,
-      "scores": { "toxicity": 0.73, "sentiment": -0.10, "hatespeech": 0.01 }
+      "scores": { "toxicity": 0.73, "sentiment": -0.1, "hatespeech": 0.01 }
     }
   ]
 }

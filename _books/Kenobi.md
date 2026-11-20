@@ -17,14 +17,13 @@ goodreads_review:
 status: Finished
 ---
 
-You definitely get what's on the tin. It's written as a western, with a sense of scale that was much smaller than any other Star Wars media I've consumed, and it tells you that directly. 
+You definitely get what's on the tin. It's written as a western, with a sense of scale that was much smaller than any other Star Wars media I've consumed, and it tells you that directly.
 
 But the stakes were still sufficiently high and it was compelling, easy to read.
 I'm glad they didn’t make Annileen (Annie, come on lol) absolutely helpless, and that everyones' stories resolve in a reliable way
 
-Chapters were paced nicely, I’m glad Tuskens got good characterization and didn’t seem all that tropey. 
+Chapters were paced nicely, I’m glad Tuskens got good characterization and didn’t seem all that tropey.
 
 The fact that people didn’t really know much about the Force, nor news about the Republic/Empire was interesting, kept the scale small and lent credibility to Ben being able to maintain his cover.
 
-The main villain ultimately being a flawed human who was driven to their decisions originally by greed, but then by fear of being in too deep with the wrong people was a compelling and surprising aspect to the story. It helped remind me that the Jedi aren't really defined by defeating the Big Bad, but rather by their interpersonal relationships and the decisions they make to help the people in front of them. Principled forgiveness is a phrase that stands out to me. 
-
+The main villain ultimately being a flawed human who was driven to their decisions originally by greed, but then by fear of being in too deep with the wrong people was a compelling and surprising aspect to the story. It helped remind me that the Jedi aren't really defined by defeating the Big Bad, but rather by their interpersonal relationships and the decisions they make to help the people in front of them. Principled forgiveness is a phrase that stands out to me.

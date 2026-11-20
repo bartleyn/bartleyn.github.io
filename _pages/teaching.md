@@ -7,7 +7,6 @@ nav: true
 nav_order: 6
 ---
 
-
 <main>
     <section class="teaching-intro">
         <div class="container">
@@ -40,7 +39,7 @@ nav_order: 6
                     <p><em>University of Southern California, Summer 2020, Summer 2022, Summer 2023, Spring 2024</em></p>
                     <p>Led lab sessions, developed exam questions, graded assignments, and held office hours to support students in understanding fundamental machine learning concepts and algorithms.</p>
                 </li>
-                
+
                 <!-- Add more teaching experiences as needed -->
             </ul>
         </div>
@@ -52,7 +51,7 @@ nav_order: 6
             <p>My approach to teaching is centered on fostering critical thinking and practical application of theoretical concepts. I believe in creating multimodal and inclusive learning environments that encourage students to ask questions, engage in discussions, and apply their knowledge to real-world problems.</p>
             <p>Key aspects of my teaching philosophy include:</p>
             <ul>
-                <li>Encouraging active learning through hands-on projects and interactive discussions</li> 
+                <li>Encouraging active learning through hands-on projects and interactive discussions</li>
                 <li>Bridging the gap between theory and practice by incorporating real-world examples and case studies</li>
                 <li>Adapting teaching methods to accommodate diverse learning styles and backgrounds</li>
                 <li>Promoting collaboration and peer learning through group projects and study sessions</li>
@@ -72,4 +71,5 @@ nav_order: 6
         -->
         </div>
     </section>
+
 </main>

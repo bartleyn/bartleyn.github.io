@@ -11,26 +11,23 @@ I've really come around on making use of AI (i.e., LLMs) as a tool for quickly i
 
 To this end I wanted to play with 'small' LLMs: I have a Mac Mini with 16GB of RAM, so I set out to see if I can run my own LLM and use it to serve my development/assistant needs. I decided to set up my computer as a local server that will run Ollama and a series of connected servers to act as my own 'local' LLM that I can use as a drop-in replacement in my workflows (i.e., consulting with an LLM and as a code assistant in Cursor/VS Code). I'll accept a little latency if it means I know where all the compute is happening and how my data is being used.
 
-In this post I'll describe how to set up Ollama and a simple chat interface that connects to whatever LLM you want that you can fit on your machine. I arbitrarily decided on the latest Gemma3 4b model that was quantized in such a way that it can run on my Mac Mini M4 with 16GB of RAM, with plenty of room to spare for enabling different behaviors of the model. I've since given the local model the ability to use tools like web-search, and I'll supply the code I used to build this. It should be straightforward to take this and run it on anywhere with a docker container. 
+In this post I'll describe how to set up Ollama and a simple chat interface that connects to whatever LLM you want that you can fit on your machine. I arbitrarily decided on the latest Gemma3 4b model that was quantized in such a way that it can run on my Mac Mini M4 with 16GB of RAM, with plenty of room to spare for enabling different behaviors of the model. I've since given the local model the ability to use tools like web-search, and I'll supply the code I used to build this. It should be straightforward to take this and run it on anywhere with a docker container.
 
 Here's a rough diagram of how you'll interact with the LLM:
-your browser 
+your browser
 -> Gradio chat interface
-	-> chat gateway
-            | \=> a) tool server
-            |         1) SearXNG search engine
-            |===> b) LLM hosted via ollama API
+-> chat gateway
+| \=> a) tool server
+| 1) SearXNG search engine
+|===> b) LLM hosted via ollama API
 
 Here's what you'll eventually be installing (if you don't have it already):
- 1) Docker Desktop
- 2) Ollama
- 3) uv / python
- 4) Gradio
- 5) Tailscale (recommended for remote access)
 
- 
-
-
+1.  Docker Desktop
+2.  Ollama
+3.  uv / python
+4.  Gradio
+5.  Tailscale (recommended for remote access)
 
 ## Installing Ollama and downloading LLMs
 
@@ -69,6 +66,7 @@ Flags:
   -h, --help      help for ollama
   -v, --version   Show version information
 ```
+
 Here we will be largely concerning ourselves with `serve` `pull` `run` `stop` `list` `ps`
 
 To download a model from the Ollama model library you issue a pull command with a `<Model>:<tag>` parameter specifying which model and type you want:
@@ -87,15 +85,15 @@ Now that we've downloaded Ollama and a model we'll move on to actually building 
 
 ## Tailscale for Remote Connection
 
-The second component to this, if you want to reliably make use of your secondary machine, is to install some sort of VPN that will connect the machine running the LLM and your local machine. It is more secure than just forwarding and exposing your LLM machine to the open internet. To this end I suggest installing something like Tailscale, which you will install and run on both your LLM machine and on the machine you want to access the LLM on. 
+The second component to this, if you want to reliably make use of your secondary machine, is to install some sort of VPN that will connect the machine running the LLM and your local machine. It is more secure than just forwarding and exposing your LLM machine to the open internet. To this end I suggest installing something like Tailscale, which you will install and run on both your LLM machine and on the machine you want to access the LLM on.
 
 Note: I use Tailscale here because it ultimately required no setup to enable my two machines to talk to each other. Other solutions would have required installing something like OpenVPN and/or changing out my router. **This setup is designed for private use over a VPN. You should not expose it publicly without authentication and rate limits**
 
-When you turn Tailscale on, you should be able to find in the tailscale settings an IP address for both machines (the usual range is 100.*.*.*). Use this to issue an `ssh` command to see if you can successfully login remotely to your LLM machine.
+When you turn Tailscale on, you should be able to find in the tailscale settings an IP address for both machines (the usual range is 100._._.*). Use this to issue an `ssh` command to see if you can successfully login remotely to your LLM machine.
 
 ## SearXNG for Searching (With nginx)
 
-Now that we can access the LLM machine remotely, we can start working towards a tool server that affords the LLM to issue tool commands, allowing it to interact with components that exist outside of the chat session. Here we will stand up a SearXNG instance, which is an open-source metasearch engine that can search across numerous search services (spanning ~200 services from Google to Wikidata to OpenAlex to Public Domain Image Archive). 
+Now that we can access the LLM machine remotely, we can start working towards a tool server that affords the LLM to issue tool commands, allowing it to interact with components that exist outside of the chat session. Here we will stand up a SearXNG instance, which is an open-source metasearch engine that can search across numerous search services (spanning ~200 services from Google to Wikidata to OpenAlex to Public Domain Image Archive).
 
 ### Docker
 
@@ -154,7 +152,6 @@ When you change those notes, you would need to spin down and up your container:
 docker compose down
 docker compose up -d
 ```
-
 
 ## Tool Server
 
@@ -217,11 +214,11 @@ async def open_url(req: OpenReq):
       r = await client.get(req.url)
       r.raise_for_status()
       html = r.text
-   
+
    doc = Document(html)
    title = doc.short_title()
    cleaned_html = doc.summary()
-   
+
    soup = BeautifulSoup(cleaned_html, "html.parser")
    text = soup.get_text("\n", stripe=True)
 
@@ -231,7 +228,7 @@ async def open_url(req: OpenReq):
 ```
 ````
 
-You can run this with a command like: 
+You can run this with a command like:
 
 `uvicorn tool_server:app --host [tailscale IP] --port [tool_port]`
 
@@ -239,8 +236,8 @@ You can run this with a command like:
 
 Now we need a means to connect the model with the tool server, and then connect the model with the user. Here's an example uvicorn script we can run for this:
 
-````markdown
-```Python
+`````markdown
+````Python
 
 import json
 import re
@@ -260,7 +257,7 @@ logger.setLevel(logging.DEBUG)
 
 
 OLLAMA_URL = "http://127.0.0.1:11434/v1/chat/completions"
-TOOL_SERVER_URL = "http://127.0.0.1:[tool_port]" 
+TOOL_SERVER_URL = "http://127.0.0.1:[tool_port]"
 MODEL = "gemma3:latest"
 
 def strip_code_fences(text: str) -> str:
@@ -308,7 +305,7 @@ app = FastAPI()
 
 class ChatIn(BaseModel):
     message: str
-    history: list[dict] = [] 
+    history: list[dict] = []
 
 #for checking if there's a tool call
 TOOL_JSON_RE = re.compile(r"^\s*\{.*\}\s*$", re.S)
@@ -319,7 +316,7 @@ def ollama_chat(messages):
 
 def call_tool(tool, args):
     if tool == "search":
-        logger.debug("Calling search tool with args: %s", args) 
+        logger.debug("Calling search tool with args: %s", args)
         # tool call should be a POST to  /search with {"query":..., "top_k":...}
         r = requests.post(f"{TOOL_SERVER_URL}/search", json=args, timeout=60)
         r.raise_for_status()
@@ -356,8 +353,8 @@ def chat(payload: ChatIn):
         assistant = ollama_chat(messages)
     logger.debug("Raw reply: %s", assistant)
     return {"reply": assistant}
-```
 ````
+`````
 
 Run the chat gateway much like the toolserver:
 
@@ -367,7 +364,7 @@ Now you should have the ability to POST a request to your chat gateway that will
 
 ````markdown
 ```bash
-curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \                                                                                  
+curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \
   -H "Content-Type: application/json" \
   -d '{"message":"Hello! Just say hi back.","history":[]}' \
   ; echo
@@ -378,19 +375,18 @@ curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \
 
 You can also confirm that it can web-search with a specific query that is past it's training date:
 
-````markdown
+``````markdown
 ```bash
 
-curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \                                                    
+curl -s http://[remote_machine_tailscale_ip]:[chat_gateway_port]/chat \
   -H "Content-Type: application/json" \
   -d '{"message":"Hello! Can you search for news results about Venezuela and date it?.","history":[]}' \
   ; echo
 
 {"reply":"Here’s a summary of recent news regarding Venezuela, as of the search results:\n\nAs of today, January 9, 2026, the United States has seized its fifth oil tanker linked to Venezuela (https://abcnews.go.com/International/live-updates/venezuela-live-updates-trump-give-details-after-us/?id=127792811). U.S. President Donald Trump met with oil company executives to discuss Venezuela (https://www.reuters.com/world/venezuela/). The U.S. has long demanded the release of detained Venezuelan President Nicolás Maduro (https://www.bbc.com/news/topics/cg41ylwvwgxt).  Venezuelaanalysis provides ongoing news and analysis (https://venezuelanalysis.com/)."}
 ```
-````markdown
 
-
+`````markdown
 ## Chat Gradio UI
 
 If that wasn't enough for you, and you want some sort of UI to interact with the model, we'll run through a simple Gradio UI that can start as a means for replicating your own ChatGPT-like interface
@@ -414,7 +410,7 @@ def to_gateway_history(chat_history):
     if a:
       out.append({"role": "assistant", "content": a})
   return out
- 
+
 def one_turn(user_message: str) -> str:
   r = requests.post(
           CHAT_GATEWAY_URL,
@@ -435,14 +431,17 @@ if __name__ == '__main__':
   demo.launch(server_name="[remote_machine_tailscale_interface]", server_port=[ui_port])
 ```
 ````
+`````
+``````
 
-This should give you the a rough interface that you can log into on your local machine's browser (http://xyz:port)! 
+This should give you the a rough interface that you can log into on your local machine's browser (`http://xyz:port`)!
 
 Code for the current version of this project will be found at TODO: XYZ
 
 ## Conclusion
 
 Here's what you should have in startup order:
+
 1. `ollama serve`
 2. `docker compose up -d (searxng)`
 3. `uvicorn tool_server`
@@ -450,6 +449,5 @@ Here's what you should have in startup order:
 5. `python gradio_ui.py`
 
 As a development note, I run my local servers all on their own `screen`, perhaps you use `tmux` but you should consider a tool like this to quickly manage the locally deployed servers. There are also likely better ways to actually run these servers, but that's out of the scope of this post.
-
 
 Thanks for the time, happy building.

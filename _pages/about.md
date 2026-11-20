@@ -26,4 +26,3 @@ latest_posts:
 I received my PhD from the University of Southern California, where my research focused on recommender systems and exposure bias in online social networks. I'm currently building youth-AI safety benchmarks for LLMs with Apgard AI. I am also pursuing independent research on decentralized social media platforms, particularly within the Bluesky/AT Protocol ecosystem.
 
 [See all projects →](/projects/)
-

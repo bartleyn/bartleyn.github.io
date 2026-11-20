@@ -1,5 +1,5 @@
 "lerman":
-  - firstname: ["Kristina", "K.", ]
+  - firstname: ["Kristina", "K."]
     url: https://scholar.google.com/citations?user=Cz6vH68AAAAJ&hl=en&oi=sra
 
 "burghardt":
@@ -9,8 +9,8 @@
 "abeliuk":
   - firstname: ["Andres", "Andrés"]
     url: https://scholar.google.com/citations?user=qKqH1lcAAAAJ&hl=en&oi=ao
-  
-"ferrara": 
+
+"ferrara":
   - firstname: ["Emilio"]
     url: https://scholar.google.com/citations?hl=en&authuser=1&user=0r7Syh0AAAAJ
 
@@ -25,7 +25,7 @@
 "dmitri":
   - firstname: ["Dmitri"]
     url: https://scholar.google.com/citations?user=I1fY1DIAAAAJ&hl=en
-  
+
 "nazgol":
   - firstname: ["Nazgol"]
     url: https://scholar.google.com/citations?user=WnfTPPsAAAAJ&hl=en&oi=ao
@@ -33,4 +33,3 @@
 "palash":
   - firstname: ["Palash"]
     url: https://scholar.google.com/citations?user=kNeah3kAAAAJ&hl
-
