@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
-        },{id: "post-setting-up-your-own-ollama-llm-agent",
+        },{id: "post-who-needs-some-retention-attention",
+      
+        title: 'Who Needs Some Retention Attention? <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "A cohort-retention analysis of Bluesky: established cohorts are steady, new sign-ups go quiet after a day -- maybe fixable in onboarding.",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://leaflet.pub/p/did:plc:iah5klwgd6ri44mzherb7ayh/3mnsa673qyk2a", "_blank");
+        
+      },
+    },{id: "post-setting-up-your-own-ollama-llm-agent",
       
         title: "Setting up your own Ollama LLM agent",
       
