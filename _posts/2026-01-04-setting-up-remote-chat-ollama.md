@@ -89,7 +89,7 @@ The second component to this, if you want to reliably make use of your secondary
 
 Note: I use Tailscale here because it ultimately required no setup to enable my two machines to talk to each other. Other solutions would have required installing something like OpenVPN and/or changing out my router. **This setup is designed for private use over a VPN. You should not expose it publicly without authentication and rate limits**
 
-When you turn Tailscale on, you should be able to find in the tailscale settings an IP address for both machines (the usual range is 100._._.*). Use this to issue an `ssh` command to see if you can successfully login remotely to your LLM machine.
+When you turn Tailscale on, you should be able to find in the tailscale settings an IP address for both machines (the usual range is 100._._.\*). Use this to issue an `ssh` command to see if you can successfully login remotely to your LLM machine.
 
 ## SearXNG for Searching (With nginx)
 

@@ -12,7 +12,7 @@ If you didn't know, I'm coming from a biological and computer science background
 
 ### Background
 
-First and foremost– _what is a social network?_
+First and foremost– *what is a social network?*
 
 I think the easiest way to understand it is in terms of social media. FaceBook. Twitter. Mastodon. Digg. Social networks are the ways we organize ourselves on these platforms, but it's also how we organize in the real world too: you, your friends, and everyone around you are nodes on a graph, and those nodes are connected by how you know or talk to each other. You are in a social network if you follow people on Twitter. You are in a social network of all the friends you have on Facebook (and all the friends they have, so on and so forth). You and your extended family make up a social network. But so do you and the person next to you at the laundromat. You may not know each other, but you could be connected simply by virtue of living in the same neighborhood and maybe just greeting each other.
 

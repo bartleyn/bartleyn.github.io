@@ -58,6 +58,7 @@ Word Embeddings and stuff
 - Our goal is to be able to evaluate word embedding performance easily and quickly, so we can compare different models and strive towards better embeddings
 - But an issue arises when evaluation methods don't always capture useful performance information about some other task you might want to test these embeddings on
 - Something else we strive for is a little bit more interpretabliity of the actual embeddings themselves
+
   - what do the dimensions capture
   - should we actually be trying to fit the dimensions into our understanding, or meld our understanding with the embeddings
 
@@ -66,6 +67,7 @@ Word Embeddings and stuff
 - But who's to say that our understanding of linguistic features are discrete, and we are throwing away potentially valuable "continuous" semantic information when we compare against these discrete features
 
 - Maybe the best thing to do in the meantime is to evaluate based on:
+
   - utility to our personal task
   - use some standard downstream tasks benchmarks
   - not evaluate and just explore the characteristics

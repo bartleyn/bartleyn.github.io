@@ -101,6 +101,7 @@ mysqldump -u [username] -p -t -T/path/to/directory [database] [tableName] --fiel
 By default it may not give you column names, which wasn't really a problem for us, but if you need column names, there are [alternate ways](https://stackoverflow.com/questions/262924/how-to-export-dump-a-mysql-table-into-a-text-file-including-the-field-names-a) to dump the data that may work for you.
 
 Hope that helps!
+
 <!-----
 ![Installing c++ extension](/assets/images/vscode_1a_cpp.png)
 ----->

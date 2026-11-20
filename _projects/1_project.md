@@ -48,10 +48,12 @@ We built on top of this study by running approx. 30 sock puppet accounts for ten
 We made each of these accounts follow the same set of users, half of whom were identified/labelled with previous research methods as pro-science and half who were labelled as anti-science. The goal was to have the following breakdown between accounts:
 
 - Some would behave randomly on the platform, ocassionally liking tweets with no preference as to their label
+
   - Half of these would be assigned to the personalized timeline
   - The other half would be assigned to the chronological timeline
 
 - Some would behave biased towards anti-science users
+
   - Half of these would be assigned to the personalized timeline
   - The other half would be assigned to the chronological timeline
 
