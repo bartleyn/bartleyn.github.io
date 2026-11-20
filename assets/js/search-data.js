@@ -119,7 +119,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-auditing-algorithmic-bias-on-twitter",
           title: 'Auditing Algorithmic Bias on Twitter',
-          description: "Sock-puppet audits of Twitter&#39;s personalized timeline, measuring how the algorithm shapes what, and whom, users are exposed to compared to a chronological feed.",
+          description: "Using sock puppet accounts to audit how Twitter&#39;s personalized timeline differs from the chronological one in what (and who) users end up seeing.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-at-protocol-infrastructure-health",
@@ -134,12 +134,12 @@ ninja.data = [{
               window.location.href = "/projects/3_project/";
             },},{id: "projects-feed-discovery-on-bluesky",
           title: 'Feed Discovery on Bluesky',
-          description: "A &quot;feed of feeds&quot; — a custom Bluesky feed generator that uses a multi-armed bandit to recommend other people&#39;s feeds.",
+          description: "A custom Bluesky feed that recommends other people&#39;s feeds, using a multi-armed bandit to decide which ones to show you.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-toxicity-model-ci-cd",
           title: 'Toxicity Model CI/CD',
-          description: "An end-to-end pipeline for training, evaluating, promoting, and serving a text toxicity model behind a live scoring API.",
+          description: "Practicing the full lifecycle of a text toxicity model, from training and evaluation to deploying it behind an API that other projects can use.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{
