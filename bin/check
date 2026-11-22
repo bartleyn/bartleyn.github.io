@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 # Every check that gates a deploy. Exits non-zero if any fails.
-#   bin/check         format check + fast build (no image resizing) + tests
-#   bin/check --site  format check + tests on an already-built _site (CI, after its full build)
+#   bin/check         format check + fast build + tests
+#   bin/check --site  format check + tests on an already-built _site (CI, after its full production build)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 npx --no-install prettier --check .
 if [[ "${1:-}" != "--site" ]]; then
-  JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,test/_config.fast.yml
+  # Development env and no image resizing: ~20 s instead of ~4 min.
+  JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,test/_config.fast.yml
 fi
 ruby test/check_images.rb
 bundle exec ruby test/check_links.rb _site
