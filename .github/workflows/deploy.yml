@@ -85,6 +85,11 @@ jobs:
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
+      - name: Format check 🔎
+        # Before the next step edits _config.yml, so it checks the committed files.
+        run: |
+          npm ci
+          npx prettier --check .
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -104,9 +109,7 @@ jobs:
           purgecss -c purgecss.config.js
       - name: Test 🧪
         # Gate: if any check fails, the deploy step below never runs.
-        run: |
-          npm ci
-          bin/check --site
+        run: bin/check --site
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
