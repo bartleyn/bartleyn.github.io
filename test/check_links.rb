@@ -7,8 +7,20 @@ require "uri"
 site = File.expand_path(ARGV[0] || "_site")
 abort "no built site at #{site}; run the build first" unless File.directory?(site)
 
-def target_exists?(path)
-  File.file?(path) || File.file?(File.join(path, "index.html")) || File.file?("#{path}.html")
+# Matches names exactly, so a case mismatch fails here as it does on the
+# (case-sensitive) live server, even on a case-insensitive Mac.
+def exact_file?(site, path)
+  return false unless path.start_with?("#{site}/")
+  dir = site
+  path.delete_prefix("#{site}/").split("/").reject(&:empty?).each do |name|
+    return false unless File.directory?(dir) && Dir.children(dir).include?(name)
+    dir = File.join(dir, name)
+  end
+  File.file?(dir)
+end
+
+def target_exists?(site, path)
+  [path, File.join(path, "index.html"), "#{path}.html"].any? { |p| exact_file?(site, p) }
 end
 
 pages = Dir.glob(File.join(site, "**", "*.html"))
@@ -24,7 +36,7 @@ pages.each do |page|
     path = URI.decode_www_form_component(ref.sub(/[?#].*/m, "").gsub("+", "%2B"))
     next if path.empty?
     full = path.start_with?("/") ? File.join(site, path) : File.expand_path(path, File.dirname(page))
-    broken[page.delete_prefix("#{site}/")] << ref unless target_exists?(full)
+    broken[page.delete_prefix("#{site}/")] << ref unless target_exists?(site, full)
   end
 end
 
