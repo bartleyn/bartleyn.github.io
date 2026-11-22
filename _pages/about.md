@@ -5,7 +5,7 @@ permalink: /
 subtitle: Independent researcher · decentralized social media, recommender systems, trust and safety · ntbartley (at) gmail.com
 profile:
   align: right
-  image: profile_pic.jpg
+  image: profile_pic.png
   image_circular: True # crops the image to make it circular
   more_info: >
 

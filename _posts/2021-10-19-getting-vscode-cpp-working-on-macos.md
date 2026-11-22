@@ -33,7 +33,7 @@ You may also need to install clang if you haven't already. You can do this by ru
 
 <div class="row mt-1">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/vscode_1_samepl_code.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/vscode_1_sample_code.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <caption class="caption">
