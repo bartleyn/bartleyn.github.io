@@ -1,0 +1,4 @@
+# Overlay for bin/check: skips responsive image generation (~4 min -> ~20 s).
+# CI runs the tests again on the full build before deploying.
+imagemagick:
+  enabled: false
