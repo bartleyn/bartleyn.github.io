@@ -191,8 +191,10 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - test/
   - vendor
   - /_posts/archive
+strict_front_matter: true # fail the build on bad YAML instead of silently skipping the file
 keep_files:
   - CNAME
   - .nojekyll
